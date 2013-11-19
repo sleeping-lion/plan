@@ -1,0 +1,27 @@
+<h1>Listing profit</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @profit.each do |profit| %>
+      <tr>
+        <td><%= profit.title %></td>
+        <td><%= link_to 'Show', profit %></td>
+        <td><%= link_to 'Edit', edit_profit_path(profit) %></td>
+        <td><%= link_to 'Destroy', profit, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Profit', new_profit_path %>

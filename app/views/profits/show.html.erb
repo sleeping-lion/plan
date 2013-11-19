@@ -1,0 +1,13 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @profit.title %>
+</p>
+<p>
+  <strong>Content :</strong>
+  <%= @profit.content %>
+</p>
+
+<%= link_to 'Edit', edit_profit_path(@profit) %> |
+<%= link_to 'Back', profits_path %>

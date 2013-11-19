@@ -1,0 +1,27 @@
+<h1>Listing analysis</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @analysis.each do |analysis| %>
+      <tr>
+        <td><%= analysis.title %></td>
+        <td><%= link_to 'Show', analysis %></td>
+        <td><%= link_to 'Edit', edit_analysis_path(analysis) %></td>
+        <td><%= link_to 'Destroy', analysis, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Analysis', new_analysis_path %>

@@ -1,0 +1,24 @@
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @vision.each do |vision| %>
+      <tr>
+        <td><%= vision.title %></td>
+        <td><%= link_to 'Show', vision %></td>
+        <td><%= link_to 'Edit', edit_vision_path(vision) %></td>
+        <td><%= link_to 'Destroy', vision, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Vision', new_vision_path %>
