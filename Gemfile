@@ -36,7 +36,7 @@ gem 'bootstrap-sass'
 gem 'fog'
 gem 'unf'
 gem 'recaptcha'
-gem 'capistrano', '~> 2.15'
+gem 'capistrano'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.

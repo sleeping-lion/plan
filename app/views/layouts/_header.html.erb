@@ -1,9 +1,10 @@
 <header>
-	<h1>SL Company 사업계획서</h1>
+	<h1><%=link_to t(:application_name),root_path %></h1>
 	<nav>
 		<ul>
 			<li><%=link_to '최종 목표(VISION)',visions_path %></li>
 			<li><%=link_to '약강점 분석',analysis_index_path %></li>
+			<li><%=link_to '아이템',items_path %></li>			
 			<li><%=link_to '수익창출',profits_path %></li>
 		</ul>
 	</nav>

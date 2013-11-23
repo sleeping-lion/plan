@@ -169,7 +169,7 @@ PLATFORMS
 
 DEPENDENCIES
   bootstrap-sass
-  capistrano (~> 2.15)
+  capistrano
   carrierwave
   ckeditor
   coffee-rails (~> 4.0.0)
