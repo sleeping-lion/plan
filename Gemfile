@@ -1,10 +1,9 @@
 source 'https://rubygems.org'
 
+ruby '1.9.3'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.1'
-
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
@@ -37,6 +36,9 @@ gem 'fog'
 gem 'unf'
 gem 'recaptcha'
 gem 'capistrano'
+gem 'thin'
+gem 'connect'
+gem 'impressionist'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
@@ -44,8 +46,11 @@ group :doc do
 end
 
 group :development, :test do
+  gem 'capistrano-rails', '~> 1.0.0'
   gem 'sqlite3'
 end
+
 group :production do
   gem 'mysql2'
+  gem 'asset_sync'
 end

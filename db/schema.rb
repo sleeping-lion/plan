@@ -21,7 +21,10 @@ ActiveRecord::Schema.define(version: 20131119092737) do
   end
 
   create_table "items", force: true do |t|
-    t.string   "title"
+    t.string   "title",      limit: 60, null: false
+    t.integer  "percentage"
+    t.string   "domain"
+    t.text     "content"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
